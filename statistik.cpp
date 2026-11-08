@@ -23,10 +23,23 @@ int nilaiMax(int nilai[], int jumlah) {
     return max;
 }
 
+int nilaiMin(int nilai[], int jumlah) {
+    int min = nilai[0];
+
+    for (int i = 1; i < jumlah; i++) {
+        if (nilai[i] < min) {
+            min = nilai[i];
+        }
+    }
+
+    return min;
+}
+
 void cetakLaporan(int nilai[], int jumlah) {
     cout << "\n===== LAPORAN NILAI =====" << endl;
-    cout << "Nilai rata-rata: " << rataRata(nilai, jumlah) << endl;
-    cout << "Nilai tertinggi: " << nilaiMax(nilai, jumlah) << endl;
+    cout << "Nilai rata-rata : " << rataRata(nilai, jumlah) << endl;
+    cout << "Nilai tertinggi : " << nilaiMax(nilai, jumlah) << endl;
+    cout << "Nilai terendah  : " << nilaiMin(nilai, jumlah) << endl;
 }
 
 int main() {
